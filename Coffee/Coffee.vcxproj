@@ -104,10 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Andre\source\repos\CoffeeLocal\Coffee\Dependencies\glfw\include;C:\Users\Andre\source\repos\CoffeeLocal\Coffee\Dependencies\glew\include;C:\Users\Andre\source\repos\CoffeeLocal\Coffee\Dependencies\glm</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Andre\source\repos\CoffeeLocal\Coffee\Dependencies\glew\lib-Release;C:\Users\Andre\source\repos\CoffeeLocal\Coffee\Dependencies\glfw\lib-vc2022;C:\Users\Andre\source\repos\CoffeeLocal\Coffee\Dependencies\glm;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;user32.lib;shell32.lib;glm.hpp;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,7 +130,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EditorCamera.cpp" />
+    <ClCompile Include="Grid.cpp" />
     <ClCompile Include="launch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EditorCamera.h" />
+    <ClInclude Include="Grid.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
